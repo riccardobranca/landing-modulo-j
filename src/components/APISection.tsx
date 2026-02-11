@@ -116,8 +116,8 @@ interface InsightPoint {
 
 const insightPoints: InsightPoint[] = [
   {
-    title: 'Capire cosa si puo automatizzare',
-    description: 'Se un servizio ha API aperte, potete collegarlo ad altri strumenti e automatizzare i flussi.',
+    title: 'Capire cosa si puo collegare',
+    description: 'Se un servizio ha API aperte, potete collegarlo ad altri strumenti e far passare dati tra di loro.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="10" />
@@ -221,7 +221,7 @@ export default function APISection() {
               style={{ color: 'var(--text-secondary)' }}
             >
               Non dovete diventare programmatori. Ma capire come i software parlano tra loro
-              vi aiutera a capire cosa potete automatizzare.
+              vi aiutera a capire cosa potete fare con gli strumenti che vedremo.
             </p>
           </div>
         </AnimatedSection>

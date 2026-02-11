@@ -75,7 +75,8 @@ export default function ModuloJ() {
           <AnimatedSection>
             <div className="quote-block">
               <strong>TL;DR</strong> — Le API sono il modo in cui i software comunicano tra loro.
-              I connettori danno all&apos;AI accesso ai vostri strumenti.
+              I connettori danno all&apos;AI accesso ai vostri strumenti,
+              e MCP li standardizza in un unico protocollo.
               Le automazioni risparmiano ore di lavoro ripetitivo.
               Gli agenti pianificano ed eseguono obiettivi da soli.
               E con il &quot;vibe coding&quot; chiunque può creare software descrivendolo a parole.
@@ -149,7 +150,7 @@ export default function ModuloJ() {
       {/* ═══════════════════════════════════════════════════════════ */}
       <MacroAreaBanner
         part={3}
-        title="L&apos;AI che Agisce"
+        title="Agenti e Autonomia"
         subtitle="Dagli assistenti agli agenti autonomi: l&apos;AI che pianifica, decide e collabora"
       />
 
@@ -308,7 +309,7 @@ export default function ModuloJ() {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm text-[var(--text-muted)] mb-4">Fine Modulo J</p>
           <p className="text-[var(--text-secondary)]">
-            Dalle API ai connettori, dalle automazioni agli agenti, dal vibe coding ai sistemi multi-agent.
+            Dalle API ai connettori, dalle automazioni agli agenti, dai sistemi multi-agent al vibe coding.
             Ora sapete dove siamo e dove stiamo andando.
           </p>
         </div>
