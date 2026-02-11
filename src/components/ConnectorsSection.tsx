@@ -57,18 +57,6 @@ const platformConnectors: PlatformConnector[] = [
   },
 ];
 
-interface ComparisonRow {
-  label: string;
-  connettore: string;
-  automazione: string;
-}
-
-const comparisonRows: ComparisonRow[] = [
-  { label: 'Quando funziona', connettore: 'Quando VOI lo chiedete', automazione: 'DA SOLA, senza intervento' },
-  { label: 'Presenza richiesta', connettore: 'Richiede la vostra presenza', automazione: 'Lavora mentre dormite' },
-  { label: 'Flessibilita', connettore: 'Piu flessibile, risposte diverse', automazione: 'Piu rigida ma costante' },
-  { label: 'Setup', connettore: 'Setup immediato', automazione: 'Richiede configurazione' },
-];
 
 /* ------------------------------------------------------------------ */
 /*  Icons                                                              */
@@ -146,75 +134,44 @@ export default function ConnectorsSection() {
         </div>
       </AnimatedSection>
 
-      {/* Visual: automazione vs connettore */}
+      {/* Visual: cos'è un connettore */}
       <AnimatedSection>
         <div className="max-w-3xl mx-auto mb-8">
-          <div className="grid md:grid-cols-2 gap-6">
-
-            {/* Card 1 - AUTOMAZIONE */}
-            <div className="glass-card p-6 flex-1 flex flex-col items-center text-center" style={{ borderColor: 'var(--border-subtle)' }}>
-              <span
-                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4"
-                style={{ background: 'rgba(156, 163, 175, 0.12)', color: 'var(--text-secondary)' }}
-              >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                </svg>
-              </span>
-              <p className="text-xs font-mono font-bold tracking-wider mb-1" style={{ color: 'var(--text-muted)' }}>
-                AUTOMAZIONE
-              </p>
-              <h4 className="text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-                Automazione
-              </h4>
-              <p className="text-sm mb-4" style={{ color: 'var(--text-secondary)' }}>
-                Lavora da sola quando succede un evento. Rigida ma affidabile.
-              </p>
-              <div
-                className="w-full rounded-lg p-3 text-xs mt-auto"
-                style={{ background: 'rgba(156, 163, 175, 0.08)', color: 'var(--text-muted)' }}
-              >
-                <span className="font-semibold" style={{ color: 'var(--text-secondary)' }}>Es:</span>{' '}
-                Se arriva email &rarr; salva allegato
-              </div>
-            </div>
-
-            {/* Card 2 - CONNETTORE */}
-            <div
-              className="glass-card p-6 flex-1 flex flex-col items-center text-center"
-              style={{ borderColor: 'rgba(249, 115, 22, 0.3)' }}
+          <div
+            className="glass-card p-8 text-center"
+            style={{ borderColor: 'rgba(249, 115, 22, 0.3)' }}
+          >
+            <span
+              className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 mx-auto"
+              style={{ background: 'rgba(249, 115, 22, 0.12)', color: 'var(--accent-primary)' }}
             >
-              <span
-                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4"
-                style={{ background: 'rgba(249, 115, 22, 0.12)', color: 'var(--accent-primary)' }}
-              >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22v-5" />
-                  <path d="M9 8V2" />
-                  <path d="M15 8V2" />
-                  <path d="M18 8v5a6 6 0 0 1-12 0V8h12z" />
-                </svg>
-              </span>
-              <p className="text-xs font-mono font-bold tracking-wider mb-1" style={{ color: 'var(--accent-primary)' }}>
-                CONNETTORE
-              </p>
-              <h4 className="text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-                Connettore
-              </h4>
-              <p className="text-sm mb-4" style={{ color: 'var(--text-secondary)' }}>
-                Risponde quando voi chiedete. Flessibile ma richiede la vostra presenza.
-              </p>
-              <div
-                className="w-full rounded-lg p-3 text-xs mt-auto"
-                style={{ background: 'rgba(249, 115, 22, 0.08)', color: 'var(--text-muted)' }}
-              >
-                <span className="font-semibold" style={{ color: 'var(--accent-primary)' }}>Es:</span>{' '}
-                Cerca nel Drive il contratto ABC
+              <PlugIcon />
+            </span>
+            <h3 className="text-xl font-semibold mb-3" style={{ color: 'var(--text-primary)' }}>
+              Un connettore = un permesso di accesso
+            </h3>
+            <p className="text-sm mb-6 max-w-xl mx-auto" style={{ color: 'var(--text-secondary)' }}>
+              Quando connettete Gmail, Drive o Calendar all&apos;AI, le state dando il <strong>permesso</strong> di
+              accedere a quei servizi. L&apos;AI non agisce da sola: risponde quando <strong>voi</strong> glielo chiedete,
+              durante la conversazione.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-4">
+              <div className="rounded-xl p-4" style={{ background: 'var(--bg-elevated)' }}>
+                <p className="text-2xl mb-1">📧</p>
+                <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>Email</p>
+                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>&ldquo;Cerca l&apos;ultima email di Marco&rdquo;</p>
+              </div>
+              <div className="rounded-xl p-4" style={{ background: 'var(--bg-elevated)' }}>
+                <p className="text-2xl mb-1">📁</p>
+                <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>Documenti</p>
+                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>&ldquo;Riassumi il contratto ABC&rdquo;</p>
+              </div>
+              <div className="rounded-xl p-4" style={{ background: 'var(--bg-elevated)' }}>
+                <p className="text-2xl mb-1">📅</p>
+                <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>Calendario</p>
+                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>&ldquo;Cosa ho in agenda domani?&rdquo;</p>
               </div>
             </div>
-
-
           </div>
         </div>
       </AnimatedSection>
@@ -226,31 +183,17 @@ export default function ConnectorsSection() {
             <span style={{ color: 'var(--accent-primary)' }}>
               <KeyIcon />
             </span>
-            <p className="text-lg font-medium" style={{ color: 'var(--text-primary)', fontStyle: 'normal' }}>
-              Pensate a dare le chiavi di casa a qualcuno...
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-4 mt-6 ml-0 sm:ml-8">
-            <div className="glass-card p-5">
-              <p className="text-sm font-mono mb-2" style={{ color: 'var(--accent-primary)' }}>
-                AUTOMAZIONE
+            <div>
+              <p className="text-lg font-medium mb-2" style={{ color: 'var(--text-primary)', fontStyle: 'normal' }}>
+                Pensate a dare le chiavi di casa a un assistente...
               </p>
               <p style={{ color: 'var(--text-secondary)' }}>
-                &ldquo;Entra quando vuoi e sistema tutto.&rdquo;
+                &ldquo;Tieni le chiavi, cosi quando ti chiamo puoi entrare e trovare quello che mi serve.&rdquo;
               </p>
-              <p className="text-sm mt-2" style={{ color: 'var(--text-muted)' }}>
-                Agisce da sola, senza che voi siate presenti.
-              </p>
-            </div>
-            <div className="glass-card p-5" style={{ borderColor: 'var(--accent-primary)' }}>
-              <p className="text-sm font-mono mb-2" style={{ color: 'var(--accent-primary)' }}>
-                CONNETTORE
-              </p>
-              <p style={{ color: 'var(--text-secondary)' }}>
-                &ldquo;Tieni le chiavi, cosi quando ti chiamo puoi entrare.&rdquo;
-              </p>
-              <p className="text-sm mt-2" style={{ color: 'var(--text-muted)' }}>
-                Accede solo su vostra richiesta, durante la conversazione.
+              <p className="text-sm mt-3" style={{ color: 'var(--text-muted)' }}>
+                Un connettore funziona esattamente cosi: date all&apos;AI le &ldquo;chiavi&rdquo; dei vostri servizi
+                (email, documenti, calendario), e lei le usa <strong>solo quando glielo chiedete</strong>.
+                Niente accessi automatici, niente sorprese.
               </p>
             </div>
           </div>
@@ -397,53 +340,7 @@ export default function ConnectorsSection() {
         </StaggerContainer>
       </AnimatedSection>
 
-      {/* 4. Connettori vs Automazioni */}
-      <AnimatedSection>
-        <h3 className="heading-subsection mb-6" style={{ color: 'var(--text-primary)' }}>
-          Connettori vs Automazioni
-        </h3>
-        <div className="glass-card overflow-hidden">
-          {/* Table header */}
-          <div
-            className="grid grid-cols-3 gap-4 px-6 py-4 text-sm font-semibold"
-            style={{
-              background: 'var(--bg-elevated)',
-              borderBottom: '1px solid var(--border-subtle)',
-            }}
-          >
-            <div style={{ color: 'var(--text-muted)' }}></div>
-            <div className="flex items-center gap-2" style={{ color: 'var(--accent-primary)' }}>
-              <PlugIcon />
-              Connettore
-            </div>
-            <div className="flex items-center gap-2" style={{ color: 'var(--text-secondary)' }}>
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="3" />
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-              </svg>
-              Automazione
-            </div>
-          </div>
-
-          {/* Table rows */}
-          {comparisonRows.map((row, i) => (
-            <div
-              key={row.label}
-              className="grid grid-cols-3 gap-4 px-6 py-4 text-sm"
-              style={{
-                borderBottom: i < comparisonRows.length - 1 ? '1px solid var(--border-subtle)' : 'none',
-                background: i % 2 === 0 ? 'var(--bg-surface)' : 'rgba(0,0,0,0.01)',
-              }}
-            >
-              <div className="font-medium" style={{ color: 'var(--text-muted)' }}>{row.label}</div>
-              <div style={{ color: 'var(--accent-primary)' }}>{row.connettore}</div>
-              <div style={{ color: 'var(--text-secondary)' }}>{row.automazione}</div>
-            </div>
-          ))}
-        </div>
-      </AnimatedSection>
-
-      {/* 5. Privacy Callout */}
+      {/* 4. Privacy Callout */}
       <AnimatedSection>
         <div className="warning-card">
           <div className="flex items-start gap-4">
