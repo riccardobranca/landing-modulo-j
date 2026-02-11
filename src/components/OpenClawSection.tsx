@@ -266,7 +266,7 @@ export default function OpenClawSection() {
               border: '1px solid rgba(249, 115, 22, 0.2)',
             }}
           >
-            J.5.8
+            J.8
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold mb-4"
@@ -414,52 +414,19 @@ export default function OpenClawSection() {
         </div>
       </AnimatedSection>
 
-      {/* 4. Il banco di pesci */}
+      {/* 4. Gli agenti si stanno organizzando? */}
       <AnimatedSection>
         <h3 className="heading-subsection mb-6" style={{ color: 'var(--text-primary)' }}>
-          Il banco di pesci
+          Gli agenti si stanno &ldquo;organizzando&rdquo;?
         </h3>
         <div className="glass-card p-6 sm:p-8">
-          <div className="flex items-start gap-4 mb-6">
-            <span
-              className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0"
-              style={{ background: 'rgba(59, 130, 246, 0.1)', color: '#3b82f6' }}
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M2 16s3-7 10-7 10 7 10 7" />
-                <path d="M2 16s3 3 10 3 10-3 10-3" />
-                <circle cx="7" cy="14" r="1" />
-                <circle cx="17" cy="14" r="1" />
-                <circle cx="12" cy="12" r="1" />
-              </svg>
-            </span>
-            <div>
-              <p className="body-large" style={{ color: 'var(--text-secondary)' }}>
-                Migliaia di pesci si muovono insieme. Sembra coordinato. Ma <strong style={{ color: 'var(--text-primary)' }}>non c&apos;e nessun leader</strong>.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid sm:grid-cols-2 gap-4 mb-6">
-            <div
-              className="rounded-xl p-4"
-              style={{ background: 'rgba(59, 130, 246, 0.05)', border: '1px solid rgba(59, 130, 246, 0.15)' }}
-            >
-              <p className="text-xs font-mono mb-2" style={{ color: '#3b82f6' }}>IL PESCE</p>
-              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                Ogni pesce segue regole locali semplici: stai vicino ai vicini, evita le collisioni, nuota nella direzione media del gruppo.
-              </p>
-            </div>
-            <div
-              className="rounded-xl p-4"
-              style={{ background: 'rgba(249, 115, 22, 0.05)', border: '1px solid rgba(249, 115, 22, 0.15)' }}
-            >
-              <p className="text-xs font-mono mb-2" style={{ color: 'var(--accent-primary)' }}>L&apos;AGENTE</p>
-              <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                Gli agenti su Moltbook funzionano allo stesso modo: statistiche convergenti, non coordinamento cosciente.
-              </p>
-            </div>
-          </div>
+          <p className="body-large mb-4" style={{ color: 'var(--text-secondary)' }}>
+            <strong style={{ color: 'var(--text-primary)' }}>No.</strong> Gli agenti su Moltbook non si coordinano consapevolmente.
+            Quello che sembra coordinazione e in realta <strong style={{ color: 'var(--accent-primary)' }}>convergenza statistica</strong>:
+            ogni agente legge i post, applica pattern matching, e genera risposte probabili.
+            Se i post tendono verso argomenti filosofici, tutti producono risposte filosofiche.
+            Non e pensiero collettivo, e autocomplete su larga scala.
+          </p>
 
           <div
             className="rounded-xl p-4"

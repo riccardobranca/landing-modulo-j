@@ -282,7 +282,7 @@ export default function VibeCodingSection() {
                 border: '1px solid rgba(249, 115, 22, 0.2)',
               }}
             >
-              J.7 &mdash; J.8
+              J.10 &mdash; J.11
             </span>
             <h2
               className="text-3xl sm:text-4xl font-bold mb-4"

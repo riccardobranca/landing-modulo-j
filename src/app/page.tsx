@@ -1,12 +1,12 @@
 import { AnimatedSection } from '@/components/AnimatedSection';
-import MindsetSection from '@/components/MindsetSection';
 import APISection from '@/components/APISection';
+import ConnectorsSection from '@/components/ConnectorsSection';
+import MCPSection from '@/components/MCPSection';
+import MindsetSection from '@/components/MindsetSection';
 import AutomationToolsSection from '@/components/AutomationToolsSection';
 import AIAutomationSection from '@/components/AIAutomationSection';
-import ConnectorsSection from '@/components/ConnectorsSection';
 import AgentsSection from '@/components/AgentsSection';
 import OpenClawSection from '@/components/OpenClawSection';
-import MCPSection from '@/components/MCPSection';
 import MultiAgentSection from '@/components/MultiAgentSection';
 import VibeCodingSection from '@/components/VibeCodingSection';
 
@@ -59,8 +59,9 @@ export default function ModuloJ() {
               L&apos;AI che <span className="text-gradient">Agisce</span>
             </h1>
             <p className="body-large text-[var(--text-secondary)] max-w-2xl mx-auto">
-              L&apos;AI non è solo chat: può lavorare per voi in background,
-              collegare i vostri strumenti, e persino creare software.
+              L&apos;AI non è solo chat: può accedere ai vostri strumenti,
+              automatizzare il lavoro ripetitivo, agire in autonomia,
+              e persino creare software.
               In questo modulo scopriamo come l&apos;AI sta passando
               dal &quot;rispondere&quot; al &quot;fare&quot;.
             </p>
@@ -73,10 +74,9 @@ export default function ModuloJ() {
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <div className="quote-block">
-              <strong>TL;DR</strong> — L&apos;AI sta evolvendo: da assistente che risponde
-              a sistema che agisce in autonomia. Le automazioni risparmiano ore di lavoro ripetitivo.
-              Le API sono il modo in cui i software comunicano tra loro.
+              <strong>TL;DR</strong> — Le API sono il modo in cui i software comunicano tra loro.
               I connettori danno all&apos;AI accesso ai vostri strumenti.
+              Le automazioni risparmiano ore di lavoro ripetitivo.
               Gli agenti pianificano ed eseguono obiettivi da soli.
               E con il &quot;vibe coding&quot; chiunque può creare software descrivendolo a parole.
               Questo modulo costruisce questi concetti uno sopra l&apos;altro,
@@ -92,7 +92,34 @@ export default function ModuloJ() {
       <MacroAreaBanner
         part={1}
         title="Le Fondamenta"
-        subtitle="Cos&apos;è un&apos;automazione e come comunicano i software tra loro"
+        subtitle="Come comunicano i software tra loro e come l&apos;AI accede ai vostri strumenti"
+      />
+
+      <section id="api" className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <APISection />
+        </div>
+      </section>
+
+      <div className="section-divider max-w-xl my-4" />
+
+      <section id="connettori" className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <ConnectorsSection />
+        </div>
+      </section>
+
+      <div className="section-divider max-w-xl my-4" />
+
+      <MCPSection />
+
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* PARTE 2 — Automazioni                                      */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      <MacroAreaBanner
+        part={2}
+        title="Le Automazioni"
+        subtitle="Il mindset, le piattaforme e il ruolo dell&apos;AI nel lavoro che gira da solo"
       />
 
       <section id="mindset" className="py-16 px-6">
@@ -102,21 +129,6 @@ export default function ModuloJ() {
       </section>
 
       <div className="section-divider max-w-xl my-4" />
-
-      <section id="api" className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <APISection />
-        </div>
-      </section>
-
-      {/* ═══════════════════════════════════════════════════════════ */}
-      {/* PARTE 2 — Strumenti                                        */}
-      {/* ═══════════════════════════════════════════════════════════ */}
-      <MacroAreaBanner
-        part={2}
-        title="Gli Strumenti"
-        subtitle="Le piattaforme di automazione e il ruolo dell&apos;AI al loro interno"
-      />
 
       <section id="strumenti" className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
@@ -133,21 +145,13 @@ export default function ModuloJ() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════ */}
-      {/* PARTE 3 — Connessioni                                      */}
+      {/* PARTE 3 — L'AI che agisce                                  */}
       {/* ═══════════════════════════════════════════════════════════ */}
       <MacroAreaBanner
         part={3}
-        title="Le Connessioni"
-        subtitle="L&apos;AI che si collega ai vostri strumenti e inizia ad agire"
+        title="L&apos;AI che Agisce"
+        subtitle="Dagli assistenti agli agenti autonomi: l&apos;AI che pianifica, decide e collabora"
       />
-
-      <section id="connettori" className="py-16 px-6">
-        <div className="max-w-6xl mx-auto">
-          <ConnectorsSection />
-        </div>
-      </section>
-
-      <div className="section-divider max-w-xl my-4" />
 
       <section id="agenti" className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
@@ -163,17 +167,6 @@ export default function ModuloJ() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════════════ */}
-      {/* PARTE 4 — Protocolli e Futuro                              */}
-      {/* ═══════════════════════════════════════════════════════════ */}
-      <MacroAreaBanner
-        part={4}
-        title="Protocolli e Futuro"
-        subtitle="Standard di connessione e sistemi multi-agent"
-      />
-
-      <MCPSection />
-
       <div className="section-divider max-w-xl my-4" />
 
       <section id="multi-agent" className="py-16 px-6">
@@ -183,10 +176,10 @@ export default function ModuloJ() {
       </section>
 
       {/* ═══════════════════════════════════════════════════════════ */}
-      {/* PARTE 5 — Creazione                                        */}
+      {/* PARTE 4 — Creazione                                        */}
       {/* ═══════════════════════════════════════════════════════════ */}
       <MacroAreaBanner
-        part={5}
+        part={4}
         title="La Creazione"
         subtitle="Creare software senza scrivere codice: il vibe coding"
       />
@@ -200,13 +193,13 @@ export default function ModuloJ() {
             <h2 className="heading-subsection mb-8">Key Takeaways</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { n: '1', text: 'Trigger + Condizione + Azione — La logica universale di ogni automazione, dalla sveglia a Make' },
-                { n: '2', text: 'Le API sono camerieri — Portano ordini tra software. Non dovete cucinare, basta saper ordinare' },
-                { n: '3', text: 'L\'AI capisce l\'intento — Classifica email, estrae dati, genera contenuti: fa ciò che i filtri tradizionali non possono' },
-                { n: '4', text: 'Connettori ≠ Automazioni — Il connettore risponde quando chiedete; l\'automazione lavora da sola' },
-                { n: '5', text: 'Gli agenti pianificano e agiscono — Ricevono obiettivi, non comandi. Decidono come raggiungerli' },
-                { n: '6', text: 'I titoli virali mentono — OpenClaw/Moltbook sembrava fantascienza, era pattern matching + cattiva sicurezza' },
-                { n: '7', text: 'MCP = USB-C dell\'AI — Uno standard per collegare qualsiasi AI a qualsiasi strumento' },
+                { n: '1', text: 'Le API sono camerieri — Portano ordini tra software. Non dovete cucinare, basta saper ordinare' },
+                { n: '2', text: 'Connettori ≠ Automazioni — Il connettore risponde quando chiedete; l\'automazione lavora da sola' },
+                { n: '3', text: 'MCP = USB-C dell\'AI — Uno standard per collegare qualsiasi AI a qualsiasi strumento' },
+                { n: '4', text: 'Trigger + Condizione + Azione — La logica universale di ogni automazione, dalla sveglia a Make' },
+                { n: '5', text: 'L\'AI capisce l\'intento — Classifica email, estrae dati, genera contenuti: fa ciò che i filtri tradizionali non possono' },
+                { n: '6', text: 'Gli agenti pianificano e agiscono — Ricevono obiettivi, non comandi. Decidono come raggiungerli' },
+                { n: '7', text: 'I titoli virali mentono — OpenClaw/Moltbook sembrava fantascienza, era pattern matching + cattiva sicurezza' },
                 { n: '8', text: 'Multi-agent = team di esperti — Più agenti specializzati battono un singolo generalista' },
                 { n: '9', text: 'Vibe coding: descrivete, create — Dal convertitore di temperatura al sito web, senza scrivere codice' },
                 { n: '10', text: 'Partite dal basso rischio — Prima monitoraggio e ricerca, poi analisi, infine azioni con conseguenze reali' },
@@ -232,6 +225,26 @@ export default function ModuloJ() {
           <AnimatedSection>
             <h2 className="heading-subsection mb-6">Per approfondire</h2>
             <div className="grid md:grid-cols-3 gap-6">
+              <div className="glass-card p-5">
+                <h4 className="font-semibold mb-3 text-[var(--accent-primary)]">Connettori e MCP</h4>
+                <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
+                  <li>
+                    &bull;{' '}
+                    <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
+                      MCP Docs
+                    </a>{' '}
+                    — Documentazione ufficiale
+                  </li>
+                  <li>
+                    &bull;{' '}
+                    <a href="https://openai.com/chatgpt" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
+                      ChatGPT Connectors
+                    </a>{' '}
+                    — Connettori integrati
+                  </li>
+                </ul>
+              </div>
+
               <div className="glass-card p-5">
                 <h4 className="font-semibold mb-3 text-[var(--accent-primary)]">Automazione</h4>
                 <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
@@ -260,14 +273,21 @@ export default function ModuloJ() {
               </div>
 
               <div className="glass-card p-5">
-                <h4 className="font-semibold mb-3 text-[var(--accent-primary)]">Vibe Coding</h4>
+                <h4 className="font-semibold mb-3 text-[var(--accent-primary)]">Agenti e Vibe Coding</h4>
                 <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
+                  <li>
+                    &bull;{' '}
+                    <a href="https://github.com/openclaw" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
+                      OpenClaw
+                    </a>{' '}
+                    — Caso studio agente AI virale
+                  </li>
                   <li>
                     &bull;{' '}
                     <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
                       Lovable
                     </a>{' '}
-                    — Il più accessibile
+                    — Vibe coding accessibile
                   </li>
                   <li>
                     &bull;{' '}
@@ -275,40 +295,6 @@ export default function ModuloJ() {
                       Claude Artifacts
                     </a>{' '}
                     — Demo in 2 minuti, gratis
-                  </li>
-                  <li>
-                    &bull;{' '}
-                    <a href="https://bolt.new" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
-                      Bolt.new
-                    </a>{' '}
-                    — Prototipazione veloce
-                  </li>
-                </ul>
-              </div>
-
-              <div className="glass-card p-5">
-                <h4 className="font-semibold mb-3 text-[var(--color-success)]">Agenti e MCP</h4>
-                <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
-                  <li>
-                    &bull;{' '}
-                    <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
-                      MCP Docs
-                    </a>{' '}
-                    — Documentazione ufficiale
-                  </li>
-                  <li>
-                    &bull;{' '}
-                    <a href="https://openai.com/chatgpt" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
-                      ChatGPT Connectors
-                    </a>{' '}
-                    — Connettori integrati
-                  </li>
-                  <li>
-                    &bull;{' '}
-                    <a href="https://github.com/openclaw" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
-                      OpenClaw
-                    </a>{' '}
-                    — Caso studio agente AI virale
                   </li>
                 </ul>
               </div>
@@ -322,7 +308,7 @@ export default function ModuloJ() {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm text-[var(--text-muted)] mb-4">Fine Modulo J</p>
           <p className="text-[var(--text-secondary)]">
-            Dall&apos;automazione semplice agli agenti autonomi, dal vibe coding ai sistemi multi-agent.
+            Dalle API ai connettori, dalle automazioni agli agenti, dal vibe coding ai sistemi multi-agent.
             Ora sapete dove siamo e dove stiamo andando.
           </p>
         </div>

@@ -129,7 +129,7 @@ export default function ConnectorsSection() {
               border: '1px solid rgba(249, 115, 22, 0.2)',
             }}
           >
-            J.4B
+            J.2
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold mb-4"
@@ -141,15 +141,15 @@ export default function ConnectorsSection() {
             className="text-lg max-w-2xl mx-auto"
             style={{ color: 'var(--text-secondary)' }}
           >
-            Quando l&apos;AI si collega direttamente ai vostri strumenti di lavoro.
+            L&apos;AI accede ai vostri strumenti di lavoro quando glielo chiedete.
           </p>
         </div>
       </AnimatedSection>
 
-      {/* Visual: automazione vs connettore vs agente */}
+      {/* Visual: automazione vs connettore */}
       <AnimatedSection>
-        <div className="max-w-4xl mx-auto mb-8">
-          <div className="flex flex-col md:flex-row items-stretch gap-0 md:gap-0">
+        <div className="max-w-3xl mx-auto mb-8">
+          <div className="grid md:grid-cols-2 gap-6">
 
             {/* Card 1 - AUTOMAZIONE */}
             <div className="glass-card p-6 flex-1 flex flex-col items-center text-center" style={{ borderColor: 'var(--border-subtle)' }}>
@@ -178,22 +178,6 @@ export default function ConnectorsSection() {
                 <span className="font-semibold" style={{ color: 'var(--text-secondary)' }}>Es:</span>{' '}
                 Se arriva email &rarr; salva allegato
               </div>
-            </div>
-
-            {/* Arrow 1 */}
-            <div className="flex items-center justify-center py-2 md:py-0 md:px-2 shrink-0">
-              <span className="hidden md:block" style={{ color: 'var(--text-muted)' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14" />
-                  <path d="M12 5l7 7-7 7" />
-                </svg>
-              </span>
-              <span className="md:hidden" style={{ color: 'var(--text-muted)' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 5v14" />
-                  <path d="M5 12l7 7 7-7" />
-                </svg>
-              </span>
             </div>
 
             {/* Card 2 - CONNETTORE */}
@@ -230,55 +214,6 @@ export default function ConnectorsSection() {
               </div>
             </div>
 
-            {/* Arrow 2 */}
-            <div className="flex items-center justify-center py-2 md:py-0 md:px-2 shrink-0">
-              <span className="hidden md:block" style={{ color: 'var(--text-muted)' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14" />
-                  <path d="M12 5l7 7-7 7" />
-                </svg>
-              </span>
-              <span className="md:hidden" style={{ color: 'var(--text-muted)' }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 5v14" />
-                  <path d="M5 12l7 7 7-7" />
-                </svg>
-              </span>
-            </div>
-
-            {/* Card 3 - AGENTE */}
-            <div
-              className="glass-card p-6 flex-1 flex flex-col items-center text-center"
-              style={{ borderColor: 'rgba(34, 197, 94, 0.3)' }}
-            >
-              <span
-                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4"
-                style={{ background: 'rgba(34, 197, 94, 0.12)', color: 'var(--color-success)' }}
-              >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z" />
-                  <path d="M9 21h6" />
-                  <path d="M10 24h4" />
-                  <path d="M12 17v-3" />
-                </svg>
-              </span>
-              <p className="text-xs font-mono font-bold tracking-wider mb-1" style={{ color: 'var(--color-success)' }}>
-                AGENTE
-              </p>
-              <h4 className="text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
-                Agente
-              </h4>
-              <p className="text-sm mb-4" style={{ color: 'var(--text-secondary)' }}>
-                Riceve un obiettivo e decide da solo come raggiungerlo.
-              </p>
-              <div
-                className="w-full rounded-lg p-3 text-xs mt-auto"
-                style={{ background: 'rgba(34, 197, 94, 0.08)', color: 'var(--text-muted)' }}
-              >
-                <span className="font-semibold" style={{ color: 'var(--color-success)' }}>Es:</span>{' '}
-                Organizza il viaggio a Roma, budget 500&euro;
-              </div>
-            </div>
 
           </div>
         </div>

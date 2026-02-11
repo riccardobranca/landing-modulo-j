@@ -196,7 +196,7 @@ export default function MultiAgentSection() {
               border: '1px solid rgba(249, 115, 22, 0.2)',
             }}
           >
-            J.6.7
+            J.9
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold mb-4"

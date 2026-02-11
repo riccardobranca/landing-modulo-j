@@ -283,7 +283,7 @@ export default function AIAutomationSection() {
               border: '1px solid rgba(249, 115, 22, 0.2)',
             }}
           >
-            J.4
+            J.6
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold mb-4"

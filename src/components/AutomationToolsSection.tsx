@@ -217,7 +217,7 @@ export default function AutomationToolsSection() {
               border: '1px solid rgba(249, 115, 22, 0.2)',
             }}
           >
-            J.3
+            J.5
           </span>
           <h2
             className="text-3xl sm:text-4xl font-bold mb-4"
