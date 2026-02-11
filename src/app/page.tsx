@@ -5,9 +5,47 @@ import AutomationToolsSection from '@/components/AutomationToolsSection';
 import AIAutomationSection from '@/components/AIAutomationSection';
 import ConnectorsSection from '@/components/ConnectorsSection';
 import AgentsSection from '@/components/AgentsSection';
+import OpenClawSection from '@/components/OpenClawSection';
 import MCPSection from '@/components/MCPSection';
+import MultiAgentSection from '@/components/MultiAgentSection';
 import VibeCodingSection from '@/components/VibeCodingSection';
-import ExercisesSection from '@/components/ExercisesSection';
+
+function MacroAreaBanner({ part, title, subtitle }: { part: number; title: string; subtitle: string }) {
+  return (
+    <section
+      className="py-10 px-6"
+      style={{
+        background: 'var(--bg-elevated)',
+        borderTop: '1px solid var(--border-subtle)',
+        borderBottom: '1px solid var(--border-subtle)',
+      }}
+    >
+      <div className="max-w-4xl mx-auto text-center">
+        <AnimatedSection>
+          <span
+            className="inline-block text-[10px] font-bold tracking-[0.2em] uppercase mb-3 px-3 py-1 rounded-full"
+            style={{
+              color: 'var(--accent-primary)',
+              background: 'rgba(249, 115, 22, 0.08)',
+              border: '1px solid rgba(249, 115, 22, 0.15)',
+            }}
+          >
+            PARTE {part}
+          </span>
+          <h2
+            className="text-2xl sm:text-3xl font-bold mb-2"
+            style={{ color: 'var(--text-primary)' }}
+          >
+            {title}
+          </h2>
+          <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
+            {subtitle}
+          </p>
+        </AnimatedSection>
+      </div>
+    </section>
+  );
+}
 
 export default function ModuloJ() {
   return (
@@ -18,12 +56,13 @@ export default function ModuloJ() {
           <AnimatedSection>
             <p className="text-sm font-mono text-[var(--accent-primary)] mb-4">MODULO J</p>
             <h1 className="heading-hero mb-6">
-              Automazioni, <span className="text-gradient">Agenti</span> e Creazione
+              L&apos;AI che <span className="text-gradient">Agisce</span>
             </h1>
             <p className="body-large text-[var(--text-secondary)] max-w-2xl mx-auto">
-              L&apos;AI non e solo chat: puo lavorare per voi in background,
+              L&apos;AI non è solo chat: può lavorare per voi in background,
               collegare i vostri strumenti, e persino creare software.
-              Senza scrivere una riga di codice.
+              In questo modulo scopriamo come l&apos;AI sta passando
+              dal &quot;rispondere&quot; al &quot;fare&quot;.
             </p>
           </AnimatedSection>
         </div>
@@ -34,132 +73,125 @@ export default function ModuloJ() {
         <div className="max-w-4xl mx-auto">
           <AnimatedSection>
             <div className="quote-block">
-              <strong>TL;DR</strong> — Le automazioni risparmiano ore di lavoro ripetitivo.
-              Le API sono il modo in cui i software parlano tra loro (pensate al cameriere del ristorante).
-              Gli agenti AI sono la prossima evoluzione: non rispondono solo, agiscono.
-              E con il &quot;vibe coding&quot; potete creare app e siti web descrivendoli a parole.
-              Questo modulo vi porta da zero a operativi.
+              <strong>TL;DR</strong> — L&apos;AI sta evolvendo: da assistente che risponde
+              a sistema che agisce in autonomia. Le automazioni risparmiano ore di lavoro ripetitivo.
+              Le API sono il modo in cui i software comunicano tra loro.
+              I connettori danno all&apos;AI accesso ai vostri strumenti.
+              Gli agenti pianificano ed eseguono obiettivi da soli.
+              E con il &quot;vibe coding&quot; chiunque può creare software descrivendolo a parole.
+              Questo modulo costruisce questi concetti uno sopra l&apos;altro,
+              dal più semplice al più avanzato.
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      <div className="section-divider max-w-xl my-12" />
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* PARTE 1 — Fondamenta                                       */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      <MacroAreaBanner
+        part={1}
+        title="Le Fondamenta"
+        subtitle="Cos&apos;è un&apos;automazione e come comunicano i software tra loro"
+      />
 
-      {/* J.1 - Il Mindset dell'Automazione */}
       <section id="mindset" className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <AnimatedSection className="mb-12">
-            <p className="text-sm font-mono text-[var(--accent-primary)] mb-2">J.1</p>
-            <h2 className="heading-section mb-4">Il Mindset dell&apos;Automazione</h2>
-            <p className="body-large text-[var(--text-secondary)] max-w-2xl">
-              Trigger, condizione, azione: la logica universale di ogni automazione.
-              E quando ha senso automatizzare (e quando no).
-            </p>
-          </AnimatedSection>
           <MindsetSection />
         </div>
       </section>
 
       <div className="section-divider max-w-xl my-4" />
 
-      {/* J.2 - Le API spiegate semplice */}
       <section id="api" className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <AnimatedSection className="mb-12">
-            <p className="text-sm font-mono text-[var(--accent-primary)] mb-2">J.2</p>
-            <h2 className="heading-section mb-4">Le API spiegate semplice</h2>
-            <p className="body-large text-[var(--text-secondary)] max-w-2xl">
-              Come i software parlano tra loro: la metafora del ristorante,
-              le API nella vita quotidiana, e cosa significa per voi.
-            </p>
-          </AnimatedSection>
           <APISection />
         </div>
       </section>
 
-      <div className="section-divider max-w-xl my-4" />
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* PARTE 2 — Strumenti                                        */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      <MacroAreaBanner
+        part={2}
+        title="Gli Strumenti"
+        subtitle="Le piattaforme di automazione e il ruolo dell&apos;AI al loro interno"
+      />
 
-      {/* J.3 - Strumenti di automazione */}
       <section id="strumenti" className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <AnimatedSection className="mb-12">
-            <p className="text-sm font-mono text-[var(--accent-primary)] mb-2">J.3</p>
-            <h2 className="heading-section mb-4">Strumenti di automazione</h2>
-            <p className="body-large text-[var(--text-secondary)] max-w-2xl">
-              Da Zapier a Make, da Power Automate a n8n.
-              Piu le automazioni native che gia avete (e forse non usate).
-            </p>
-          </AnimatedSection>
           <AutomationToolsSection />
         </div>
       </section>
 
       <div className="section-divider max-w-xl my-4" />
 
-      {/* J.4 - AI nelle automazioni */}
       <section id="ai-automazioni" className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <AnimatedSection className="mb-12">
-            <p className="text-sm font-mono text-[var(--accent-primary)] mb-2">J.4</p>
-            <h2 className="heading-section mb-4">AI nelle automazioni</h2>
-            <p className="body-large text-[var(--text-secondary)] max-w-2xl">
-              L&apos;AI capisce l&apos;intento, non solo le parole chiave.
-              Classificare email, estrarre dati da fatture, generare contenuti: tre superpoteri.
-            </p>
-          </AnimatedSection>
           <AIAutomationSection />
         </div>
       </section>
 
-      <div className="section-divider max-w-xl my-4" />
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* PARTE 3 — Connessioni                                      */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      <MacroAreaBanner
+        part={3}
+        title="Le Connessioni"
+        subtitle="L&apos;AI che si collega ai vostri strumenti e inizia ad agire"
+      />
 
-      {/* J.4B - Connettori */}
       <section id="connettori" className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <AnimatedSection className="mb-12">
-            <p className="text-sm font-mono text-[var(--accent-primary)] mb-2">J.4B</p>
-            <h2 className="heading-section mb-4">Connettori: l&apos;AI collegata ai vostri strumenti</h2>
-            <p className="body-large text-[var(--text-secondary)] max-w-2xl">
-              Non dovete piu copiare e incollare: l&apos;AI puo accedere
-              direttamente alle vostre email, documenti e calendario.
-            </p>
-          </AnimatedSection>
           <ConnectorsSection />
         </div>
       </section>
 
       <div className="section-divider max-w-xl my-4" />
 
-      {/* J.5 - Agenti AI */}
       <section id="agenti" className="py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <AnimatedSection className="mb-12">
-            <p className="text-sm font-mono text-[var(--accent-primary)] mb-2">J.5</p>
-            <h2 className="heading-section mb-4">Agenti AI</h2>
-            <p className="body-large text-[var(--text-secondary)] max-w-2xl">
-              Non solo rispondono: pianificano, agiscono, verificano.
-              Da Netflix e Google Maps ai nuovi agenti nei chatbot.
-            </p>
-          </AnimatedSection>
           <AgentsSection />
         </div>
       </section>
 
       <div className="section-divider max-w-xl my-4" />
 
-      {/* J.6 - GPT Actions & MCP */}
+      <section id="openclaw" className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <OpenClawSection />
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* PARTE 4 — Protocolli e Futuro                              */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      <MacroAreaBanner
+        part={4}
+        title="Protocolli e Futuro"
+        subtitle="Standard di connessione e sistemi multi-agent"
+      />
+
       <MCPSection />
 
       <div className="section-divider max-w-xl my-4" />
 
-      {/* J.7-J.8 - Vibe Coding */}
+      <section id="multi-agent" className="py-16 px-6">
+        <div className="max-w-6xl mx-auto">
+          <MultiAgentSection />
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════ */}
+      {/* PARTE 5 — Creazione                                        */}
+      {/* ═══════════════════════════════════════════════════════════ */}
+      <MacroAreaBanner
+        part={5}
+        title="La Creazione"
+        subtitle="Creare software senza scrivere codice: il vibe coding"
+      />
+
       <VibeCodingSection />
-
-      <div className="section-divider max-w-xl my-4" />
-
-      {/* J.9-J.11 - Esercizi Pratici */}
-      <ExercisesSection />
 
       {/* Key Takeaways */}
       <section className="py-16 px-6 bg-[var(--bg-elevated)]">
@@ -168,14 +200,16 @@ export default function ModuloJ() {
             <h2 className="heading-subsection mb-8">Key Takeaways</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
-                { n: '1', text: 'Trigger → Condizione → Azione — La logica universale di ogni automazione, dalla sveglia a Make' },
+                { n: '1', text: 'Trigger + Condizione + Azione — La logica universale di ogni automazione, dalla sveglia a Make' },
                 { n: '2', text: 'Le API sono camerieri — Portano ordini tra software. Non dovete cucinare, basta saper ordinare' },
-                { n: '3', text: 'L\'AI capisce l\'intento — Classifica email, estrae dati, genera contenuti: fa cio che i filtri tradizionali non possono' },
+                { n: '3', text: 'L\'AI capisce l\'intento — Classifica email, estrae dati, genera contenuti: fa ciò che i filtri tradizionali non possono' },
                 { n: '4', text: 'Connettori ≠ Automazioni — Il connettore risponde quando chiedete; l\'automazione lavora da sola' },
-                { n: '5', text: 'Gli agenti pianificano e agiscono — Non solo rispondono: scompongono obiettivi, usano strumenti, verificano' },
-                { n: '6', text: 'MCP = USB-C dell\'AI — Uno standard per collegare qualsiasi AI a qualsiasi strumento' },
-                { n: '7', text: 'Vibe coding: descrivete, create — Dal convertitore di temperatura al sito web, senza scrivere codice' },
-                { n: '8', text: 'Partite dal basso rischio — Prima monitoraggio e ricerca, poi analisi, infine azioni con conseguenze reali' },
+                { n: '5', text: 'Gli agenti pianificano e agiscono — Ricevono obiettivi, non comandi. Decidono come raggiungerli' },
+                { n: '6', text: 'I titoli virali mentono — OpenClaw/Moltbook sembrava fantascienza, era pattern matching + cattiva sicurezza' },
+                { n: '7', text: 'MCP = USB-C dell\'AI — Uno standard per collegare qualsiasi AI a qualsiasi strumento' },
+                { n: '8', text: 'Multi-agent = team di esperti — Più agenti specializzati battono un singolo generalista' },
+                { n: '9', text: 'Vibe coding: descrivete, create — Dal convertitore di temperatura al sito web, senza scrivere codice' },
+                { n: '10', text: 'Partite dal basso rischio — Prima monitoraggio e ricerca, poi analisi, infine azioni con conseguenze reali' },
               ].map((item) => (
                 <div key={item.n} className="glass-card p-4 flex gap-3">
                   <span
@@ -230,17 +264,10 @@ export default function ModuloJ() {
                 <ul className="space-y-2 text-sm text-[var(--text-secondary)]">
                   <li>
                     &bull;{' '}
-                    <a href="https://replit.com" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
-                      Replit
-                    </a>{' '}
-                    — Agent + deploy immediato
-                  </li>
-                  <li>
-                    &bull;{' '}
                     <a href="https://lovable.dev" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
                       Lovable
                     </a>{' '}
-                    — Il piu accessibile
+                    — Il più accessibile
                   </li>
                   <li>
                     &bull;{' '}
@@ -248,6 +275,13 @@ export default function ModuloJ() {
                       Claude Artifacts
                     </a>{' '}
                     — Demo in 2 minuti, gratis
+                  </li>
+                  <li>
+                    &bull;{' '}
+                    <a href="https://bolt.new" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
+                      Bolt.new
+                    </a>{' '}
+                    — Prototipazione veloce
                   </li>
                 </ul>
               </div>
@@ -271,10 +305,10 @@ export default function ModuloJ() {
                   </li>
                   <li>
                     &bull;{' '}
-                    <a href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
-                      Gemini Deep Research
+                    <a href="https://github.com/openclaw" target="_blank" rel="noopener noreferrer" className="text-[var(--accent-primary)] hover:underline">
+                      OpenClaw
                     </a>{' '}
-                    — Agente di ricerca
+                    — Caso studio agente AI virale
                   </li>
                 </ul>
               </div>
@@ -288,7 +322,8 @@ export default function ModuloJ() {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm text-[var(--text-muted)] mb-4">Fine Modulo J</p>
           <p className="text-[var(--text-secondary)]">
-            Avete completato il modulo. Ora automatizzate, sperimentate, create.
+            Dall&apos;automazione semplice agli agenti autonomi, dal vibe coding ai sistemi multi-agent.
+            Ora sapete dove siamo e dove stiamo andando.
           </p>
         </div>
       </footer>

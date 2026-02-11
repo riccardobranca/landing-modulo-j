@@ -1,6 +1,7 @@
 'use client';
 
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
+import DemoCard from '@/components/DemoCard';
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -539,6 +540,14 @@ export default function MCPSection() {
             </div>
           </div>
         </AnimatedSection>
+
+        {/* Demo Card */}
+        <DemoCard
+          title="Claude + MCP collegato a Google Drive"
+          description="Collegate Claude al vostro Google Drive tramite MCP. Chiedetegli di cercare un documento specifico: lo trova, lo legge e lo riassume. Vedrete in diretta cosa significa 'connettore AI'."
+          link={{ url: 'https://claude.ai', label: 'Apri Claude' }}
+          duration="5 min"
+        />
       </div>
     </section>
   );

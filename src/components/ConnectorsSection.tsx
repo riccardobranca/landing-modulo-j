@@ -118,6 +118,172 @@ export default function ConnectorsSection() {
   return (
     <div className="space-y-16">
 
+      {/* Section header */}
+      <AnimatedSection>
+        <div className="text-center mb-12">
+          <span
+            className="inline-block text-sm font-mono font-bold px-3 py-1.5 rounded-lg mb-4"
+            style={{
+              background: 'rgba(249, 115, 22, 0.1)',
+              color: 'var(--accent-primary)',
+              border: '1px solid rgba(249, 115, 22, 0.2)',
+            }}
+          >
+            J.4B
+          </span>
+          <h2
+            className="text-3xl sm:text-4xl font-bold mb-4"
+            style={{ color: 'var(--text-primary)' }}
+          >
+            I Connettori
+          </h2>
+          <p
+            className="text-lg max-w-2xl mx-auto"
+            style={{ color: 'var(--text-secondary)' }}
+          >
+            Quando l&apos;AI si collega direttamente ai vostri strumenti di lavoro.
+          </p>
+        </div>
+      </AnimatedSection>
+
+      {/* Visual: automazione vs connettore vs agente */}
+      <AnimatedSection>
+        <div className="max-w-4xl mx-auto mb-8">
+          <div className="flex flex-col md:flex-row items-stretch gap-0 md:gap-0">
+
+            {/* Card 1 - AUTOMAZIONE */}
+            <div className="glass-card p-6 flex-1 flex flex-col items-center text-center" style={{ borderColor: 'var(--border-subtle)' }}>
+              <span
+                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4"
+                style={{ background: 'rgba(156, 163, 175, 0.12)', color: 'var(--text-secondary)' }}
+              >
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+              </span>
+              <p className="text-xs font-mono font-bold tracking-wider mb-1" style={{ color: 'var(--text-muted)' }}>
+                AUTOMAZIONE
+              </p>
+              <h4 className="text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
+                Automazione
+              </h4>
+              <p className="text-sm mb-4" style={{ color: 'var(--text-secondary)' }}>
+                Lavora da sola quando succede un evento. Rigida ma affidabile.
+              </p>
+              <div
+                className="w-full rounded-lg p-3 text-xs mt-auto"
+                style={{ background: 'rgba(156, 163, 175, 0.08)', color: 'var(--text-muted)' }}
+              >
+                <span className="font-semibold" style={{ color: 'var(--text-secondary)' }}>Es:</span>{' '}
+                Se arriva email &rarr; salva allegato
+              </div>
+            </div>
+
+            {/* Arrow 1 */}
+            <div className="flex items-center justify-center py-2 md:py-0 md:px-2 shrink-0">
+              <span className="hidden md:block" style={{ color: 'var(--text-muted)' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="M12 5l7 7-7 7" />
+                </svg>
+              </span>
+              <span className="md:hidden" style={{ color: 'var(--text-muted)' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 5v14" />
+                  <path d="M5 12l7 7 7-7" />
+                </svg>
+              </span>
+            </div>
+
+            {/* Card 2 - CONNETTORE */}
+            <div
+              className="glass-card p-6 flex-1 flex flex-col items-center text-center"
+              style={{ borderColor: 'rgba(249, 115, 22, 0.3)' }}
+            >
+              <span
+                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4"
+                style={{ background: 'rgba(249, 115, 22, 0.12)', color: 'var(--accent-primary)' }}
+              >
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22v-5" />
+                  <path d="M9 8V2" />
+                  <path d="M15 8V2" />
+                  <path d="M18 8v5a6 6 0 0 1-12 0V8h12z" />
+                </svg>
+              </span>
+              <p className="text-xs font-mono font-bold tracking-wider mb-1" style={{ color: 'var(--accent-primary)' }}>
+                CONNETTORE
+              </p>
+              <h4 className="text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
+                Connettore
+              </h4>
+              <p className="text-sm mb-4" style={{ color: 'var(--text-secondary)' }}>
+                Risponde quando voi chiedete. Flessibile ma richiede la vostra presenza.
+              </p>
+              <div
+                className="w-full rounded-lg p-3 text-xs mt-auto"
+                style={{ background: 'rgba(249, 115, 22, 0.08)', color: 'var(--text-muted)' }}
+              >
+                <span className="font-semibold" style={{ color: 'var(--accent-primary)' }}>Es:</span>{' '}
+                Cerca nel Drive il contratto ABC
+              </div>
+            </div>
+
+            {/* Arrow 2 */}
+            <div className="flex items-center justify-center py-2 md:py-0 md:px-2 shrink-0">
+              <span className="hidden md:block" style={{ color: 'var(--text-muted)' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="M12 5l7 7-7 7" />
+                </svg>
+              </span>
+              <span className="md:hidden" style={{ color: 'var(--text-muted)' }}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 5v14" />
+                  <path d="M5 12l7 7 7-7" />
+                </svg>
+              </span>
+            </div>
+
+            {/* Card 3 - AGENTE */}
+            <div
+              className="glass-card p-6 flex-1 flex flex-col items-center text-center"
+              style={{ borderColor: 'rgba(34, 197, 94, 0.3)' }}
+            >
+              <span
+                className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4"
+                style={{ background: 'rgba(34, 197, 94, 0.12)', color: 'var(--color-success)' }}
+              >
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z" />
+                  <path d="M9 21h6" />
+                  <path d="M10 24h4" />
+                  <path d="M12 17v-3" />
+                </svg>
+              </span>
+              <p className="text-xs font-mono font-bold tracking-wider mb-1" style={{ color: 'var(--color-success)' }}>
+                AGENTE
+              </p>
+              <h4 className="text-lg font-semibold mb-2" style={{ color: 'var(--text-primary)' }}>
+                Agente
+              </h4>
+              <p className="text-sm mb-4" style={{ color: 'var(--text-secondary)' }}>
+                Riceve un obiettivo e decide da solo come raggiungerlo.
+              </p>
+              <div
+                className="w-full rounded-lg p-3 text-xs mt-auto"
+                style={{ background: 'rgba(34, 197, 94, 0.08)', color: 'var(--text-muted)' }}
+              >
+                <span className="font-semibold" style={{ color: 'var(--color-success)' }}>Es:</span>{' '}
+                Organizza il viaggio a Roma, budget 500&euro;
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </AnimatedSection>
+
       {/* 1. Keys Metaphor */}
       <AnimatedSection>
         <div className="quote-block py-6">

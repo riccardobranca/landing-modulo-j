@@ -1,6 +1,7 @@
 'use client';
 
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
+import DemoCard from '@/components/DemoCard';
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -656,6 +657,22 @@ export default function VibeCodingSection() {
             </div>
           </div>
         </AnimatedSection>
+
+        {/* Demo Cards */}
+        <div className="max-w-3xl mx-auto">
+          <DemoCard
+            title="Claude Artifacts: la calcolatrice in 30 secondi"
+            description="Aprite Claude e scrivete: 'Crea una calcolatrice funzionante con design moderno'. In pochi secondi vedrete apparire un'app funzionante. Poi chiedete modifiche: 'Aggiungi percentuale e memoria'. Questo è vibe coding."
+            link={{ url: 'https://claude.ai', label: 'Apri Claude' }}
+            duration="2 min"
+          />
+          <DemoCard
+            title="Lovable: da descrizione a sito web"
+            description="Descrivete un sito web a Lovable in chat, come fareste con un collega. Lovable lo costruisce pezzo per pezzo davanti ai vostri occhi. Potete dire 'non mi piace il colore' e lui lo cambia. In 2 minuti avete un prototipo navigabile, deployato online."
+            link={{ url: 'https://lovable.dev', label: 'Apri Lovable' }}
+            duration="5 min"
+          />
+        </div>
       </div>
     </section>
   );

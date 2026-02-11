@@ -283,6 +283,113 @@ export default function MindsetSection() {
           </div>
         </AnimatedSection>
 
+        {/* Timeline visual: evoluzione AI 2022-2026 */}
+        <AnimatedSection delay={0.05}>
+          <div className="glass-card max-w-4xl mx-auto mb-12 p-8 sm:p-10">
+            {/* Horizontal timeline (desktop) */}
+            <div className="hidden md:block">
+              {/* Line + dots */}
+              <div className="relative flex items-center justify-between" style={{ height: '20px' }}>
+                {/* Connecting line */}
+                <div
+                  className="absolute top-1/2 left-0 right-0"
+                  style={{
+                    height: '2px',
+                    background: 'var(--border-subtle)',
+                    transform: 'translateY(-50%)',
+                  }}
+                />
+                {/* Dots */}
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <div
+                    key={i}
+                    className="relative z-10 flex-shrink-0"
+                    style={{
+                      width: '16px',
+                      height: '16px',
+                      borderRadius: '50%',
+                      background: 'var(--accent-primary)',
+                      boxShadow: '0 0 0 4px rgba(249, 115, 22, 0.15)',
+                    }}
+                  />
+                ))}
+              </div>
+              {/* Labels */}
+              <div className="flex justify-between mt-4">
+                {[
+                  { year: '2022', title: 'ChatGPT', desc: "L'AI diventa accessibile" },
+                  { year: '2023', title: 'GPT-4 + Plugin', desc: "L'AI ragiona e si collega" },
+                  { year: '2024', title: 'Agenti + MCP', desc: "L'AI agisce autonomamente" },
+                  { year: '2025', title: 'Multi-agent', desc: 'Team di AI collaborano' },
+                  { year: '2026', title: 'Vibe Coding', desc: 'Chiunque crea software' },
+                ].map((item) => (
+                  <div key={item.year} className="text-center" style={{ width: '18%' }}>
+                    <div className="text-base font-bold" style={{ color: 'var(--accent-primary)' }}>
+                      {item.year}
+                    </div>
+                    <div className="text-sm font-semibold mt-1" style={{ color: 'var(--text-primary)' }}>
+                      {item.title}
+                    </div>
+                    <div className="text-xs mt-0.5" style={{ color: 'var(--text-muted)' }}>
+                      {item.desc}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Vertical timeline (mobile) */}
+            <div className="md:hidden flex flex-col gap-0">
+              {[
+                { year: '2022', title: 'ChatGPT', desc: "L'AI diventa accessibile" },
+                { year: '2023', title: 'GPT-4 + Plugin', desc: "L'AI ragiona e si collega" },
+                { year: '2024', title: 'Agenti + MCP', desc: "L'AI agisce autonomamente" },
+                { year: '2025', title: 'Multi-agent', desc: 'Team di AI collaborano' },
+                { year: '2026', title: 'Vibe Coding', desc: 'Chiunque crea software' },
+              ].map((item, idx) => (
+                <div key={item.year} className="flex gap-4">
+                  {/* Dot + vertical line */}
+                  <div className="flex flex-col items-center">
+                    <div
+                      className="flex-shrink-0"
+                      style={{
+                        width: '14px',
+                        height: '14px',
+                        borderRadius: '50%',
+                        background: 'var(--accent-primary)',
+                        boxShadow: '0 0 0 4px rgba(249, 115, 22, 0.15)',
+                        marginTop: '4px',
+                      }}
+                    />
+                    {idx < 4 && (
+                      <div
+                        style={{
+                          width: '2px',
+                          flex: 1,
+                          minHeight: '32px',
+                          background: 'var(--border-subtle)',
+                        }}
+                      />
+                    )}
+                  </div>
+                  {/* Text */}
+                  <div className="pb-6">
+                    <div className="text-sm font-bold" style={{ color: 'var(--accent-primary)' }}>
+                      {item.year}
+                    </div>
+                    <div className="text-sm font-semibold" style={{ color: 'var(--text-primary)' }}>
+                      {item.title}
+                    </div>
+                    <div className="text-xs" style={{ color: 'var(--text-muted)' }}>
+                      {item.desc}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+
         {/* ---- 1. Trigger → Condizione → Azione Flow ---- */}
         <AnimatedSection delay={0.1}>
           <div className="mb-16">

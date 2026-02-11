@@ -1,6 +1,7 @@
 'use client';
 
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
+import DemoCard from '@/components/DemoCard';
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
@@ -205,6 +206,34 @@ function ArrowRightIcon() {
 export default function AutomationToolsSection() {
   return (
     <div className="space-y-12">
+      {/* Section header */}
+      <AnimatedSection>
+        <div className="text-center mb-12">
+          <span
+            className="inline-block text-sm font-mono font-bold px-3 py-1.5 rounded-lg mb-4"
+            style={{
+              background: 'rgba(249, 115, 22, 0.1)',
+              color: 'var(--accent-primary)',
+              border: '1px solid rgba(249, 115, 22, 0.2)',
+            }}
+          >
+            J.3
+          </span>
+          <h2
+            className="text-3xl sm:text-4xl font-bold mb-4"
+            style={{ color: 'var(--text-primary)' }}
+          >
+            Strumenti di Automazione
+          </h2>
+          <p
+            className="text-lg max-w-2xl mx-auto"
+            style={{ color: 'var(--text-secondary)' }}
+          >
+            Le piattaforme che permettono di creare automazioni senza scrivere codice.
+          </p>
+        </div>
+      </AnimatedSection>
+
       {/* -------------------------------------------------------- */}
       {/*  1. Platform cards                                        */}
       {/* -------------------------------------------------------- */}
@@ -408,6 +437,14 @@ export default function AutomationToolsSection() {
           </StaggerContainer>
         </div>
       </AnimatedSection>
+
+      {/* Demo Card */}
+      <DemoCard
+        title="Zapier: creare un'automazione da template"
+        description="Aprite Zapier e scegliete un template pronto, come 'Save Gmail attachments to Google Drive'. Vedete in pratica come funziona il meccanismo trigger → azione: arriva un'email con allegato, l'allegato finisce automaticamente su Drive."
+        link={{ url: 'https://zapier.com/app/explore', label: 'Apri Zapier Templates' }}
+        duration="3 min"
+      />
     </div>
   );
 }

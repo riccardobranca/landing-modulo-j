@@ -272,6 +272,34 @@ function AlertTriangleIcon() {
 export default function AIAutomationSection() {
   return (
     <div className="space-y-12">
+      {/* Section header */}
+      <AnimatedSection>
+        <div className="text-center mb-12">
+          <span
+            className="inline-block text-sm font-mono font-bold px-3 py-1.5 rounded-lg mb-4"
+            style={{
+              background: 'rgba(249, 115, 22, 0.1)',
+              color: 'var(--accent-primary)',
+              border: '1px solid rgba(249, 115, 22, 0.2)',
+            }}
+          >
+            J.4
+          </span>
+          <h2
+            className="text-3xl sm:text-4xl font-bold mb-4"
+            style={{ color: 'var(--text-primary)' }}
+          >
+            L&apos;AI nelle Automazioni
+          </h2>
+          <p
+            className="text-lg max-w-2xl mx-auto"
+            style={{ color: 'var(--text-secondary)' }}
+          >
+            L&apos;AI aggiunge intelligenza: classifica, estrae dati, genera contenuti e prende decisioni.
+          </p>
+        </div>
+      </AnimatedSection>
+
       {/* -------------------------------------------------------- */}
       {/*  1. AI Workflow visualization                              */}
       {/* -------------------------------------------------------- */}
